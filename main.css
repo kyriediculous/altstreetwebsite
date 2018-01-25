@@ -32,8 +32,11 @@ h3 span {
   width:35%;
 }
 
-#header .container-fluid a {
-  z-index:9999;
+#header .container-fluid {
+  z-index:1
+}
+.header-particle img, .header-copy {
+  z-index:999 !important;
 }
 
 @media (max-width: 1024px) {
@@ -89,6 +92,7 @@ canvas {
 /* ---- particles.js container ---- */
 
 #particles-js {
+  z-index:2;
   position: absolute;
   width: 100%;
   height: 100%;
