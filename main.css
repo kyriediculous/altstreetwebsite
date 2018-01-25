@@ -1,10 +1,10 @@
 html, body {
-  margin:0;
-  padding:0;
+
 }
 
-header {
-  padding:0;
+#header {
+  text-align:center;
+  color:white;
   position: relative;
   background: rgb(69,72,77); /* Old browsers */
   background: -moz-radial-gradient(ellipse at center, rgba(69,72,77,.5) 0%,rgba(0,0,0,.9) 100%), url('./img/header.png') no-repeat;  /* FF3.6-15 */
@@ -20,7 +20,35 @@ h1 {
   text-align: center;
 }
 
-header h1 {
+h3 {
+  text-align:center;
+}
+
+h3 span {
+  color: #28cf9f !important;
+}
+#header .header-particle img{
+  margin-top:50px;
+  width:35%;
+}
+
+#header .container-fluid a {
+  z-index:9999;
+}
+
+@media (max-width: 1024px) {
+  #header .header-particle img{
+    margin-top:70px;
+    width:55%;
+  }
+}
+#header .header-copy h3 {
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:30px;
+}
+
+#header h1 {
   color: white;
 }
 
@@ -37,8 +65,8 @@ section {
 }
 
 .bg-dark {
-  background: #1D1F20 !important;
-  color:white !important;
+  background: #1D1F20;
+  color:white;
 }
 
 @media (max-width: 699px) {
@@ -51,6 +79,40 @@ section {
   .svg--sm {
     display: none;
   }
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: 50% 50%;
+}
+/*GRADIENT BUTTONS */
+.btn-grad {
+  margin-top:20px;
+  margin:bottom:20px;
+  padding: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 3px #eee;
+  border-radius: 10px;
+ }
+
+.btn-grad:hover {
+  background-position: right center;
+}
+.btn-grad-1 {
+  background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);
 }
 
 .navbar {
@@ -110,21 +172,18 @@ section {
   }
 }
 
-.helper {
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-}
-#logo {
-  vertical-align:middle;
-  width:30% !important;
-}
 @media only screen and (min-width: 992px) {
   #techstack{
     height:25vh;
   }
   #header{
     height:75vh;
+  }
+}
+
+@media only screen and (max-width: 1441px) {
+  #header{
+    height:90vh;
   }
 }
 
@@ -154,7 +213,6 @@ section {
   background: #085078;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #85D8CE, #085078), url('./img/bg-pattern.png') repeat;  /* Chrome 10-25, Safari 5.1-6 */
   background: url('./img/bg-pattern.png') repeat; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 }
 
 @charset "UTF-8";
@@ -435,7 +493,6 @@ color:white !important;
 }
 
 #footer .container {
-
 	left: 50%;
 	margin: 1em 0 0 -6em;
 	position: relative;

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-      $(window).scroll(function() { // check if scroll event happened
+    $(window).scroll(function() { // check if scroll event happened
         if ($(document).scrollTop() > 50) { // check if user scrolled more than 50 from top of the browser window
           $(".fixed-top").css("background-color", "#1D1F20"); // if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
         } else {
@@ -19,19 +19,19 @@ $(document).ready(function(){
     			$.each(response.items, function (k, item) {
     				var visibleSm;
     				if(k < 3){
+            } else {
     					visibleSm = '';
-    				 } else {
     					 visibleSm = ' visible-sm';
     				 }
     				output += '<div class="col-sm-6 col-md-4' + visibleSm + '">';
-    				output += '<div class="blog-post"><header>';
+    				output += '<div class="blog-post"><div>';
     				output += '<h4 class="date">' + $.format.date(item.pubDate, "dd<br>MMM") + "</h4>";
     				var tagIndex = item.description.indexOf('<img'); // Find where the img tag starts
     				var srcIndex = item.description.substring(tagIndex).indexOf('src=') + tagIndex; // Find where the src attribute starts
     				var srcStart = srcIndex + 5; // Find where the actual image URL starts; 5 for the length of 'src="'
     				var srcEnd = item.description.substring(srcStart).indexOf('"') + srcStart; // Find where the URL ends
     				var src = item.description.substring(srcStart, srcEnd); // Extract just the URL
-    				output += '<div class="blog-element"><img class="img-responsive" src="' + src + '" width="360px" height="240px"></div></header>';
+    				output += '<div class="blog-element"><img class="img-responsive" src="' + src + '" width="360px" height="240px"></div></div>';
     				output += '<div class="blog-content"><h4><a href="'+ item.link + '">' + item.title + '</a></h4>';
     				output += '<div class="post-meta"><span>By ' + item.author + '</span></div>';
     				var yourString = item.description.replace(/<img[^>]*>/g,""); //replace with your string.
@@ -47,4 +47,115 @@ $(document).ready(function(){
     			$content.html(output);
     		}
     	});
+    });
+
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 80,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#ffffff"
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          },
+          "polygon": {
+            "nb_sides": 5
+          },
+          "image": {
+            "src": "img/github.svg",
+            "width": 100,
+            "height": 100
+          }
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": false,
+          "anim": {
+            "enable": false,
+            "speed": 1,
+            "opacity_min": 0.1,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 3,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 40,
+            "size_min": 0.1,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 1,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "grab"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 140,
+            "line_linked": {
+              "opacity": 1
+            }
+          },
+          "bubble": {
+            "distance": 400,
+            "size": 40,
+            "duration": 2,
+            "opacity": 8,
+            "speed": 3
+          },
+          "repulse": {
+            "distance": 200,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true
     });
