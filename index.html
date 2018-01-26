@@ -9,6 +9,7 @@
   <meta name="author" content="Alt Street BVBA">
   <title>Alt Street</title>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <link rel="stylesheet" type="text/css" href="main.css" />
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 </head>
@@ -28,16 +29,16 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="#page-top">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">Services</a>
+              <a class="nav-link" href="#services">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="post.html">Blog</a>
+              <a class="nav-link" href="#blog">Blog</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="#footer">Contact</a>
             </li>
           </ul>
         </div>
@@ -45,18 +46,19 @@
     </nav>
 
 <div id="header">
-  <div class="container-fluid">
   <div id="particles-js"></div>
+
+  <div class="container-fluid">
     <div class="row">
-      <div class="col-md-12 header-particle">
-      <img id="logo" src="img/rsz_altlogo.png">
+      <div class="col-md-12 col-xs-12 header-particle">
+      <img class="" id="logo" src="img/rsz_altlogo.png">
       </div>
     </div>
 
     <div class="row">
-      <div class="col-md-12 header-copy">
-        <h3>We <span class="fa fa-heart"></span> Blockchain</h3>
-        <a class="btn-grad btn-grad-1">Discover Alt Street</a>
+      <div class="col-md-12 col-xs-12  header-copy">
+        <h1>We <span class="fa fa-heart"></span> Blockchain</h1>
+        <a href="#services" class="wow animated fadeInUp delay-09s btn-grad btn-grad-1">Discover Alt Street</a>
       </div>
     </div>
 
@@ -71,45 +73,125 @@
 
 <section id="techstack">
   <h1>Our Tech Stack</h1>
+  <hr class="primary" />
     <div class="techstack-grid">
-              <div class="techstack"><img src="img/customers/kofola.png" title="Kofola" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive"></div>
-              <div class="techstack"><img src="img/customers/evian.png" title="Evian" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive"></div>
-              <div class="techstack"><img src="img/customers/cslink.png" title="CS Link" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive"></div>
-              <div class="techstack"><img src="img/customers/botas66.png" title="Botas 66 Concept store" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive"></div>
-              <div class="techstack"><img src="img/customers/mdfc.png" title="MediaFabríca" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive"></div>
-              <div class="techstack"><img src="img/customers/vanek.png" title="VANĚK Strojírenská výroba" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive"></div>
+              <div class="wow animated bounceInLeft delay-09s techstack"><img src="img/customers/sol.png" title="Solidity" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive"></div>
+              <div class="wow animated bounceInLeft delay-09s techstack"><img src="img/customers/ethereum.png" title="Ethereum" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive"></div>
+              <div class="wow animated bounceInLeft delay-09s techstack"><img src="img/customers/monax.png" title="Monax" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive"></div>
+              <div class="wow animated bounceInLeft delay-09s techstack"><img src="img/customers/web3js.png" title="Web3JS" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive"></div>
+              <div class="wow animated bounceInRight delay-09s techstack"><img src="img/customers/node.png" title="NodeJS" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive"></div>
+              <div class="wow animated bounceInRight delay-09s techstack"><img src="img/customers/express.png" title="ExpressJS" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive"></div>
+              <div class="wow animated bounceInright delay-09s techstack"><img src="img/customers/mongo.png" title="MongoDB" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive"></div>
+              <div class="wow animated bounceInRight delay-09s techstack"><img src="img/customers/vue.png" title="VueJS" data-placement="bottom" data-toggle="tooltip" alt="" class="img-responsive"></div>
     </div>
 </section>
 
-  <section id="services">
-    <h1>Section Content</h1>
-  <h1>Section Content</h1>
-    <h1>Section Content</h1>
-        <h1>Section Content</h1>
-          <h1>Section Content</h1>
+  <section id="services" class="featured-area">
+    <h1>What We Do</h1><hr />
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="single-feature d-flex flex-wrap justify-content-between">
+            <div class="icon">
+              <img src="img/icons/chain.svg" width="100px" height="100px" />
+            </div>
+            <div class="desc">
+              <h4>Blockchain</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="single-feature d-flex flex-wrap justify-content-between">
+            <div class="icon">
+              <img src="img/icons/contracts.svg" width="100px" height="100px" />
+            </div>
+            <div class="desc">
+              <h4>Smart Contracts</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="single-feature d-flex flex-wrap justify-content-between">
+            <div class="icon">
+              <img src="img/icons/eth.svg" width="100px" height="100px" />
+            </div>
+            <div class="desc">
+              <h4>Tokenized Economy</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="single-feature d-flex flex-wrap justify-content-between">
+            <div class="icon">
+              <img src="img/icons/encryption.svg" width="100px" height="100px" />
+            </div>
+            <div class="desc">
+              <h4>Smart Security</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+<section class="about-area">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+
+              <div class="single-content-left">
+                <div class="align-left">
+                  <h3  class="align-left">Token Sales</h3>
+                  <p>LCD screens are uniquely modern in style, and the liquid crystals that make them work have allowed humanity to create slimmer, more portable technology.</p>
+                </div>
+
+                <div class="icon">
+                  <img src="img/icons/ico-cart.svg"  width="200px" height="200px"/>
+                </div>
+              </div>
+
+
+      </div>
+
+      <div class="col-lg-6">
+        <div class="single-content-right">
+          <div class="icon">
+            <img src="img/icons/concepts.svg"  width="200px" height="200px"/>
+          </div>
+          <div class="align-right">
+            <h3  class="align-right">Proof of Concepts</h3>
+            <p>LCD screens are uniquely modern in style, and the liquid crystals that make them work have allowed humanity to create slimmer, more portable technology.</p>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+    <a  href="#footer" class="wow animated fadeInUp delay-09s btn-grad btn-grad-1">Get started</a>
+  </div>
 </section>
 
 <section class="section blog" id="blog">
-  <div class="container">
-    <!---->
-    <div class="section-heading">
-      <h2>From The Blog</h2><span>Awesome articles from the blog</span>
-    </div>
-    <!---->
-    <div class="section-content" id="blogContent">
-      <div class="row" id="jsonContent"></div>
-    </div>
-    <!-- /#blogContent-->
-    <div class="text-center"><a class="btn btn-dark" id="loadBlogPosts" href="//medium.jasonmdesign.com">View All<span class="fa fa-angle-double-right"></span></a></div>
+  <div class="section-heading">
+    <h1>From The Blog</h2><hr class="primary" />
   </div>
-  <!-- /.container-->
+<div class="container">
+  <!---->
+  <div class="section-content" id="blogContent">
+    <div class="blog-grid" id="jsonContent"></div>
+  </div>
+</div>
+    <div class="text-center"><a class="wow animated fadeInUp delay-09s btn-grad btn-grad-1" id="loadBlogPosts" href="https://www.medium.com/@alt_street">View All<span class="fa fa-angle-double-right"></span></a></div>
 </section>
 
 <section id="footer">
   <div class="container-fluid contact">
       <div class="row">
           <div class="col-lg-8 offset-lg-2 text-center">
-              <h2 class="section-heading">Let's Get In Touch!</h2>
+              <h1 class="section-heading">Let's Get In Touch!</h1>
               <hr class="primary">
               <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
           </div>
@@ -132,15 +214,16 @@
   <li class="linkedin"><a href="#"><i class="fa fa-2x fa-linkedin"></i></a></li>
   <li class="medium"><a href="#"><i class='fa fa-2x fa-medium'></i></a></li>
 </ul>
-<p class="text-center">Brought to you by <span class="text-primary">Alt Street</span><span>&nbsp;&copy;</span>2018</p>
 </div>
 </div>
+<p class="text-center">Brought to you by <span class="primary">Alt Street</span><span>&nbsp;&copy;</span>2018</p>
 </section>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-dateFormat/1.0/jquery.dateFormat.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 <script src="main.js"></script>
 </body>
 </html>

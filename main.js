@@ -23,7 +23,7 @@ $(document).ready(function(){
     					visibleSm = '';
     					 visibleSm = ' visible-sm';
     				 }
-    				output += '<div class="col-sm-6 col-md-4' + visibleSm + '">';
+
     				output += '<div class="blog-post"><div>';
     				output += '<h4 class="date">' + $.format.date(item.pubDate, "dd<br>MMM") + "</h4>";
     				var tagIndex = item.description.indexOf('<img'); // Find where the img tag starts
@@ -31,7 +31,7 @@ $(document).ready(function(){
     				var srcStart = srcIndex + 5; // Find where the actual image URL starts; 5 for the length of 'src="'
     				var srcEnd = item.description.substring(srcStart).indexOf('"') + srcStart; // Find where the URL ends
     				var src = item.description.substring(srcStart, srcEnd); // Extract just the URL
-    				output += '<div class="blog-element"><img class="img-responsive" src="' + src + '" width="360px" height="240px"></div></div>';
+    				output += '<div class="blog-element"><img class="img-responsive" src="' + src + '" max-width="360px" max-height="240px"></div></div>';
     				output += '<div class="blog-content"><h4><a href="'+ item.link + '">' + item.title + '</a></h4>';
     				output += '<div class="post-meta"><span>By ' + item.author + '</span></div>';
     				var yourString = item.description.replace(/<img[^>]*>/g,""); //replace with your string.
@@ -41,7 +41,7 @@ $(document).ready(function(){
     				//re-trim if we are in the middle of a word
     				trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" ")))
     				output += '<p>' + trimmedString + '...</p>';
-    				output += '</div></div></div>';
+    				output += '</div></div>';
     				return k < 3;
     			});
     			$content.html(output);
@@ -159,3 +159,27 @@ $(document).ready(function(){
       },
       "retina_detect": true
     });
+
+
+    // handle links with @href started with '#' only
+    $(document).on('click', 'a[href^="#"]', function(e) {
+        // target element id
+        var id = $(this).attr('href');
+
+        // target element
+        var $id = $(id);
+        if ($id.length === 0) {
+            return;
+        }
+
+        // prevent standard hash navigation (avoid blinking in IE)
+        e.preventDefault();
+
+        // top position relative to the document
+        var pos = $id.offset().top;
+
+        // animated top scrolling
+        $('body, html').animate({scrollTop: pos});
+    });
+
+    wow = new WOW().init();
